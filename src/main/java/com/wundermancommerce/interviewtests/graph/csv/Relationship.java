@@ -1,6 +1,6 @@
 package com.wundermancommerce.interviewtests.graph.csv;
 
-public class RelationshipData {
+public class Relationship {
     private String person1;
     private String person2;
     private String relatedBy;
@@ -29,7 +29,7 @@ public class RelationshipData {
         this.relatedBy = relatedBy;
     }
 
-    public RelationshipData(String person1, String person2, String relatedBy) {
+    public Relationship(String person1, String person2, String relatedBy) {
         this.person1 = person1;
         this.person2 = person2;
         this.relatedBy = relatedBy;
