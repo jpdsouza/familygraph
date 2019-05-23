@@ -2,10 +2,6 @@ package com.wundermancommerce.interviewtests.graph.csv;
 
 import com.google.common.base.Objects;
 import com.google.common.collect.ComparisonChain;
-import com.google.common.collect.Sets;
-
-
-import java.util.Set;
 
 public class Person implements Comparable<Person>{
 
@@ -36,31 +32,6 @@ public class Person implements Comparable<Person>{
     public void setAge(int age) {
         this.age = age;
     }
-
-    public Set<Person> getFamily() {
-        if(null==family) {
-            family = Sets.newHashSet();
-        }
-        return family;
-    }
-
-    public void setFamily(Set<Person> family) {
-        this.family = family;
-    }
-
-    public Set<Person> getFriends() {
-        if(null==friends) {
-            friends = Sets.newHashSet();
-        }
-        return friends;
-    }
-
-    public void setFriends(Set<Person> friends) {
-        this.friends = friends;
-    }
-
-    Set<Person> family;
-    Set<Person> friends;
 
     public Person(String name, String email, int age) {
         this.name = name;
@@ -97,8 +68,6 @@ public class Person implements Comparable<Person>{
                 "name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 ", age=" + age +
-                ", family=" + family +
-                ", friends=" + friends +
                 '}';
     }
 }

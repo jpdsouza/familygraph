@@ -12,6 +12,7 @@ import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
+
 public class FamilyGraphLoader {
 
     private static final String COMMA = ",";
@@ -27,14 +28,6 @@ public class FamilyGraphLoader {
     };
 
     private static Function<Person, String> email = Person::getEmail;
-
-    public Map<Person, LinkedList<Person>> getFamilyRelationship() {
-        return familyRelationship;
-    }
-
-    public Map<Person, LinkedList<Person>> getFriendsRelatiionship() {
-        return friendsRelatiionship;
-    }
 
     private Map<Person, LinkedList<Person>> familyRelationship = Maps.newHashMap();
     private Map<Person, LinkedList<Person>> friendsRelatiionship = Maps.newHashMap();
@@ -109,9 +102,20 @@ public class FamilyGraphLoader {
             inputList = br.lines().filter(line -> !line.isEmpty()).map(function).collect(Collectors.toList());
             br.close();
         } catch (IOException e) {
+
         }
         return inputList;
     }
+
+    public Map<Person, LinkedList<Person>> getFamilyRelationship() {
+        return familyRelationship;
+    }
+
+    public Map<Person, LinkedList<Person>> getFriendsRelatiionship() {
+        return friendsRelatiionship;
+    }
+
+
 
 
 }
