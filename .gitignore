@@ -12,7 +12,7 @@ gradle-app.setting
 
 .idea
 
-
+out/
 *.jar
 *.aar
 *.war
